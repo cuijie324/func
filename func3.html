@@ -1,0 +1,29 @@
+
+<script type="text/javascript">
+	fs.readFile(fileName, callback);
+	
+	var readFileThunk = Thunk(fileName);
+	readFileThunk(callback);
+	
+	var Thunk = function(fileName){
+		return function(callback){
+			return fs.readFile(fileName, callback);
+		}
+	}
+
+
+	function constfunc(v){return function(){return v;}
+	function constFuncs(){
+		var funcs = [];
+		for(var i=0;i<10;i++){		
+			funcs[i] = (function(index){
+				return function(){
+					return index;
+				}
+			}(i));
+		}
+		return funcs		
+	}
+	var funcs = constFuncs();	
+	console.log(funcs[5]());
+</script>
