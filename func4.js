@@ -10,7 +10,6 @@ function partialLeft(f){
         var a = array(args, 1);
         //跟第二个函数调用的参数组成新数组，放在了开头的位置
         a = a.concat(array(arguments));
-        console.log(a);
         //把新数组传给f处理
         return f.apply(this, a);
     }
@@ -22,5 +21,3 @@ var f = function(x, y, z){
 
 var result = partialLeft(f, 2)(3, 4);
 console.log(result);//2*(3-4);
-
-console.log([2, 3, 4].slice(1));
