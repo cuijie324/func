@@ -5,7 +5,7 @@
             "name": "启动",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/promise1.js",
+            "program": "${workspaceRoot}/async1.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
