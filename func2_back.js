@@ -13,5 +13,3 @@ function trace(o, m) {
 }
 
 trace(obj_a, 'add').add(1, 2);
-VM205:9 Entering: add
-VM205:11 End calling
