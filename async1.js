@@ -1,3 +1,5 @@
+// generator函数初学习
+
 // function* gen(x){
 //   var y = yield x + 2;
 //   console.log(y);
