@@ -23,31 +23,13 @@ var gen = function* () {
 //     console.log('Generator 函数执行完成');
 // }).catch(err => console.error(err));
 
-//手动执行
-function gen_auto(){
-    var g = gen();
+// var asyncReadFile = async function(){
+//     var f1 = await readFile('a.text');
+//     var f2 = await readFile('b.text');
 
-    g.next().value.then(data => {
-        g.next(data).value.then(data => {
-            g.next(data);
-        })
-    })
-}
+//     console.log(f1.toString());
+//     console.log(f2.toString());
+// }
 
-gen_auto();
-
-//自动执行
-function gen_co(fn){
-    var g = fn();
-
-    function next(data){
-        var result = g.next(data);
-        if(result.done) return result.value;
-
-        result.value.then(next);
-    }
-
-    next();
-}
-
-gen_co(gen);
+// var result = asyncReadFile();
+// console.log(result);
