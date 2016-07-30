@@ -42,7 +42,7 @@ function gen_exec(){
 }
 //gen_exec();
 
-//自动执行
+//自动执行上面的generator函数
 function gen_auto(fn){
     var gen = fn();
 
