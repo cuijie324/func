@@ -43,7 +43,6 @@ function findall(a, x){
     var i = 0;
     while(i < a.length){
         var index = a.indexOf(x, i);
-        console.log(index);
         if(index != -1){
             results.push(index);
             i = index + 1;

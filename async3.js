@@ -16,12 +16,14 @@ var gen = function* () {
 
     console.log(f1.toString());
     console.log(f2.toString());
+
+    return 3;
 }
 
 //使用co自动执行
-// co(gen).then(function () {
-//     console.log('Generator 函数执行完成');
-// }).catch(err => console.error(err));
+co(gen).then(function (data) {
+    console.log('Generator 函数执行完成', data);
+}).catch(err => console.error(err));
 
 //手动执行
 function gen_auto(){
@@ -31,7 +33,7 @@ function gen_auto(){
         g.next(data).value.then(data => {
             g.next(data);
         })
-    })
+    });
 }
 
 gen_auto();
@@ -46,7 +48,6 @@ function gen_co(fn){
 
         result.value.then(next);
     }
-
     next();
 }
 
