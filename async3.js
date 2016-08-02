@@ -36,7 +36,7 @@ function gen_auto(){
 
 gen_auto();
 
-//自动执行
+//手写的自动执行
 function gen_co(fn){
     var g = fn();
 
@@ -51,3 +51,8 @@ function gen_co(fn){
 }
 
 gen_co(gen);
+
+//co的并发操作
+// co(function* (){
+//     var res = 
+// });
