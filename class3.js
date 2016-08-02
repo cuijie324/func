@@ -68,4 +68,3 @@ var NotSet = AbstractSet.extend(
 //模块
 var sets = {};
 sets.SingletonSet = sets.AbstractSet.extend();
-

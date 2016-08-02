@@ -25,7 +25,6 @@ var a = new Complex(1, 2);
 // a.add(3);
 // a.toString();
 
-
 console.log(a.constructor);
 console.log(Object.prototype.toString.call(a));
 

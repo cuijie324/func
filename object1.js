@@ -1,3 +1,5 @@
+//对象的可扩展性：锁定、封闭、冻结
+
 var obj = { a: "1", b: "2", c: "3" };
 
 console.log("\nstarting...");
